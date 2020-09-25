@@ -1,0 +1,25 @@
+{
+  "name": "nebiyu",
+  "version": "1.0.0",
+  "description": "resume website ",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "dart-sass sass/main.scss css/style.css --watch",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "dart-sass sass/main.scss css/style.comp.css",
+    "concat:css": "concat -o css/style.concat.css css/icon-fonts.css css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 version' css/style.concat.css -o css/style.prefix.css",
+    "compress:css": " dart-sass  css/style.prefix.css css/style.min.css --style=compressed",
+    "build:css": "npm-run-all compile:sass concat:css  prefix:css compress:css"
+  },
+  "author": "ephrata nebiyu",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "concat": "^1.0.3",
+    "dart-sass": "^1.25.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^7.1.1"
+  }
+}
