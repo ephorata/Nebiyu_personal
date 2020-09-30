@@ -1,0 +1,44 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --color-grey-light-1: #f1f3f8;
+  --color-grey-light-2: #d6e0f0;
+  --color-grey-dark-1: #8d93ab;
+  --color-grey-dark-2: #393b44;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+.mt-small {
+  margin-top: 2rem;
+}
+
+.heading-1 {
+  text-align: center;
+  font-size: 3rem;
+  text-transform: capitalize;
+  letter-spacing: .5rem;
+}
+
+.heading-2 {
+  font-weight: 600;
+  font-size: 3rem;
+  text-transform: capitalize;
+  letter-spacing: .4rem;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
